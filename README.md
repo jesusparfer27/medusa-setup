@@ -16,8 +16,8 @@
     "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
-    "postinstall": "medusa db:migrate && cd src/admin && npm install && npm run build",
-    "dev": "medusa develop",
+    "postinstall": "medusa db:migrate && cd admin && npm install && npm run build", 
+    "dev": "medusa develop", 
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
@@ -25,7 +25,6 @@
   "dependencies": {
     "@medusajs/admin-sdk": "2.10.3",
     "@medusajs/cli": "2.10.3",
-    "@medusajs/draft-order": "^2.10.3",
     "@medusajs/framework": "2.10.3",
     "@medusajs/medusa": "2.10.3",
     "@mikro-orm/core": "6.4.3",
